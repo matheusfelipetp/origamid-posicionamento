@@ -1,3 +1,3 @@
 # Exercício de Posicionamento no CSS
 
-O objetivo desse exercício é treinar o posicionamento dos elementos de Grid e FlexBox utilizando apenas HTML e CSS. O foco aqui não é a responsividade.
+Projeto simples do curso Origamid utilizando apenas HTML e CSS, com o objetivo de treinar o posicionamento dos elementos através do Grid e Flexbox.
