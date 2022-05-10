@@ -91,6 +91,11 @@ ul {
   right: -30px;
 }
 
+.foto-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .botao {
   background: #ee2211;
   color: white;
@@ -144,4 +149,49 @@ footer {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width: 1000px) {
+  .media-conteudo {
+    grid-template-columns: 1fr;
+  }
+  #subtitulo {
+    text-align: center;
+  }
+  .texto-conteudo {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  header {
+    gap: 30px;
+  }
+  .conteudo-principal {
+    grid-template-columns: 1fr;
+  }
+  .texto-conteudo {
+    text-align: left;
+    justify-items: start;
+  }
+  #titulo::after {
+    display: none;
+  }
+  #subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #subtitulo {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
