@@ -1,7 +1,28 @@
+:root {
+  --primary: #ee2211;
+  --primary-2: #900;
+  --bg-color: #f7f7f7;
+  --bg-color-2: #ffffff;
+  --text: #111111;
+  --vantagens: #c6c6c6;
+  --wave: url("img/onda.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111111;
+    --bg-color-2: #000000;
+    --text: #ffffff;
+    --vantagens: rgba(255, 255, 255, 0.2);
+    --wave: url("img/onda-dark.svg");
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
-  background: #f7f7f7;
+  background: var(--bg-color);
+  color: var(--text);
   display: grid;
   gap: 60px;
   justify-items: center;
@@ -49,8 +70,8 @@ ul {
 
 .menu a {
   display: block;
-  background: white;
-  color: black;
+  background: var(--bg-color-2);
+  color: var(--text);
   border-radius: 4px;
   padding: 1rem 2rem;
   text-transform: uppercase;
@@ -58,7 +79,7 @@ ul {
 }
 
 .menu a:hover {
-  border-color: #ee2211;
+  border-color: var(--primary);
 }
 
 .conteudo-principal {
@@ -68,7 +89,7 @@ ul {
 }
 
 .texto-conteudo {
-  background: white;
+  background: var(--bg-color-2);
   padding: 40px;
   text-align: right;
   position: relative;
@@ -85,7 +106,7 @@ ul {
   content: "";
   width: 60px;
   height: 4px;
-  background: #ee2211;
+  background: var(--primary);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -97,7 +118,7 @@ ul {
 }
 
 .botao {
-  background: #ee2211;
+  background: var(--primary);
   color: white;
   text-transform: uppercase;
   border-radius: 4px;
@@ -106,13 +127,13 @@ ul {
 }
 
 .botao:hover {
-  background: #900;
+  background: var(--primary-2);
 }
 
 #subtitulo {
-  background-image: url("img/onda.svg");
+  background-image: var(--wave);
   font-size: 4rem;
-  color: #c6c6c6;
+  color: var(--vantagens);
   padding: 40px;
   text-align: right;
   align-self: center;
@@ -120,7 +141,7 @@ ul {
 }
 
 .vantagens {
-  background: white;
+  background: var(--bg-color-2);
   padding: 40px;
 }
 
@@ -136,15 +157,15 @@ ul {
 }
 
 .vantagens-itens:hover {
-  border-left: 3px solid #ee2211;
+  border-left: 3px solid var(--primary);
 }
 
 .vantagens-itens:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--bg-color);
 }
 
 footer {
-  background: white;
+  background: var(--bg-color-2);
   padding: 40px;
   width: 100%;
   text-align: center;
